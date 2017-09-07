@@ -1,0 +1,149 @@
+body {
+  font-family: Garamond, serif;
+  font-size: 16px;
+}
+
+.header {
+  color: black;
+  font-size: 100px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.sec {
+  padding-top: 300px;
+  width: 100%;
+  margin: 0px;
+  z-index: 9;
+}
+
+.content {
+  font-size: 16px;
+  margin-top: 0px;
+}
+
+#header {
+  background-image: linear-gradient(rgba(255,255,255,1) 60%, rgba(255,255,255,0));
+  height: 300px;
+}
+
+#blue {
+  display: inline;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: url("./images/intro_water.gif");
+  animation-name: appear;
+  animation-delay: 0s;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+#jo {
+  display: inline;
+  margin-left: 40px;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(rgba(255,0,0,0) 100%, rgba(255,0,0,1));
+}
+
+#site {
+  opacity: 0;
+  position: fixed;
+  animation-name: appear;
+  animation-delay: 0s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+#navigation {
+  display: inline-block;
+  margin-left: 40px;
+}
+
+#text {
+  opacity: 0;
+  animation-name: appear;
+  animation-delay: 0;
+  animation-duration: 1s;
+  animation-play-state: paused;
+}
+
+.name {
+  font-size: 150px;
+}
+
+.navlink {
+  color: black;
+  font-size: 16px;
+  text-decoration: none;
+  display: block;
+}
+
+#AboutLink {
+  opacity: 0;
+  animation-name: appear;
+  animation-delay: 2s;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+#CourseworkLink {
+  opacity: 0;
+  animation-name: appear;
+  animation-delay: 2.3s;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+#SkillsLink {
+  opacity: 0;
+  animation-name: appear;
+  animation-delay: 2.5s;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+#ExperienceLink {
+  opacity: 0;
+  animation-name: appear;
+  animation-delay: 2.6s;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+#AboutLink:hover {
+  color: red;
+  text-decoration: none;
+}
+
+#CourseworkLink:hover {
+  color: purple;
+  text-decoration: none;
+}
+
+#SkillsLink:hover {
+  color: orange;
+  text-decoration: none;
+}
+
+#ExperienceLink:hover {
+  color: green;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

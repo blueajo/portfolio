@@ -1,72 +1,85 @@
 <!doctype html>
 <html>
-  <head>
-    <title>Blue Jo</title>
-    <meta name="description" content="Computer Science student at UW" />
-    <meta http-equiv="author" content="Blue Jo" />
-    <meta charset="utf-8" />
-    <link href="css/styles.css" type="text/css" rel="stylesheet" />
-    <script type="text/javascript" src="animations.js"></script>
-  </head>
-  <body>
-    <div id="nav_bar">
-      <a href="#About" class="nav_el" id="About_link">About</a><br />
-      <a href="#Coursework" class="nav_el" id="Coursework_link">Coursework</a><br />
-      <a href="#Skills" class="nav_el" id="Skills_link">Skills</a><br />
-      <a href="#Experience" class="nav_el" id="Experience_link">Experience</a><br />
-    </div>
+<head>
+  <title>Blue Jo</title>
+  <meta name="description" content="Computer Science student at UW" />
+  <meta http-equiv="author" content="Blue Jo" />
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link href="./index.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
 
-    <div id="sun"></div>
+  <div class="container">
 
-    <div id="top">
+  <div id="spacer" style="height:35vh;"></div>
 
-    <div id ="text">
-    <div id="About" class="sec">
-      <h2 class="header">Blue Jo</h2>
-      <p class="content">Sophomore at the University of Washington double
-        majoring in Computer Science and Molecular Biology</p>
-      <div id="buttons">
-        <img src="images/icons/github_icon.png" alt="github icon" title="github"
-          width="50" height="50" class="button" />
-        <img src="images/icons/linkedin_icon.png" alt="linkedin icon"
-          title="linkedin" width="50" height="50" class="button" />
-        <img src="images/icons/email_icon.png" alt="email icon"
-          title="email Blue" width="50" height="50" class="button" />
-      </div>
-    </div>
+  <div id="site">
 
-    <div id="Coursework" class="sec">
-      <h2 class="header">Coursework</h2>
-      <ul class="content">
-        <li>Data Structures and Parallelism</li>
-        <li>Foundations of Computing I</li>
-        <li>Software Design and Implementation</li>
-        <li>The Hardware-Software Interface</li>
-        <li>Introduction to Data Management</li>
-        <li>Programming Languages</li>
-      </ul>
-    </div>
-
-    <div id="Skills" class="sec">
-      <h2 class="header">Skills</h2>
-      <ul class="content">
-        <li>Java</li>
-        <li>HTML</li>
-        <li>SQL</li>
-      </ul>
-    </div>
-
-    <div id="Experience" class="sec">
-      <h2 id="Experience" class="header">Experience</h2>
-      <h4 class="content">Class Projects</h4>
-      <ul class="content">
-        <li>Built a campus map and path finder application in Java</li>
-        <li>Implemented malloc in c</li>
-        <li>Implemented a hash map and AVL tree in Java</li>
-      </ul>
-    </div>
+  <div class="sticky-top" id="header" style="min-width:500px;">
+    <h1 class="name" id='blue'>Blue</h1>
+    <h1 class="name" id='jo'>Jo</h1>
+    <div id="navigation">
+      <a class="navlink" id="AboutLink" href="#About">About</a>
+      <a class="navlink" id="CourseworkLink" href="#Coursework">Coursework</a>
+      <a class="navlink" id="SkillsLink" href="#Skills">Skills</a>
+      <a class="navlink" id="ExperienceLink" href="#Experience">Experience</a>
     </div>
   </div>
 
-  </body>
+  <div id ="text">
+
+  <div id="About" class="sec">
+    <h2 class="header">About</h2>
+    <p>Sophomore at the University of Washington double
+      majoring in Computer Science and Molecular Biology</p>
+    <div id="buttons">
+      <img src="images/icons/github_icon.png" alt="github icon" title="github"
+        width="50" height="50" class="button" />
+      <img src="images/icons/linkedin_icon.png" alt="linkedin icon"
+        title="linkedin" width="50" height="50" class="button" />
+      <img src="images/icons/email_icon.png" alt="email icon"
+        title="email Blue" width="50" height="50" class="button" />
+    </div>
+  </div>
+
+  <div id="Coursework" class="sec">
+    <h2 class="header">Coursework</h2>
+    <ul class="content">
+      <li>Data Structures and Parallelism</li>
+      <li>Foundations of Computing I</li>
+      <li>Software Design and Implementation</li>
+      <li>The Hardware-Software Interface</li>
+      <li>Introduction to Data Management</li>
+      <li>Programming Languages</li>
+    </ul>
+  </div>
+
+  <div id="Skills" class="sec">
+    <h2 class="header">Skills</h2>
+    <ul class="content">
+      <li>Java</li>
+      <li>HTML</li>
+      <li>SQL</li>
+    </ul>
+  </div>
+
+  <div id="Experience" class="sec" style="height:100vh;">
+    <h2 class="header">Experience</h2>
+    <h4 class="content">Class Projects</h4>
+    <ul class="content">
+      <li>Built a campus map and path finder application in Java</li>
+      <li>Implemented malloc in c</li>
+      <li>Implemented a hash map and AVL tree in Java</li>
+    </ul>
+  </div>
+  </div>
+  </div>
+  </div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.js"   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="   crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<script type="text/javascript" src="index.js"></script>
+</body>
 </html>
