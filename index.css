@@ -1,13 +1,15 @@
 body {
-  font-family: Garamond, serif;
+  font-family: 'Halant', serif;
   font-size: 16px;
 }
 
 .header {
   color: black;
-  font-size: 75px;
+  font-size: 50px;
   margin: 0px;
   padding: 0px;
+  font-family: 'Dosis';
+  font-weight: 300;
 }
 
 .sec {
@@ -19,12 +21,15 @@ body {
 
 .content {
   font-size: 16px;
-  margin-top: 0px;
 }
 
 #header {
   background-image: linear-gradient(rgba(255,255,255,1) 60%, rgba(255,255,255,0));
   padding-bottom: 100px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 #blue {
@@ -57,12 +62,23 @@ body {
   animation-fill-mode: forwards;
 }
 
-#navigation {
-  display: inline-block;
-  margin-left: 40px;
+#nextButton {
+  display: block;
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 25px;
+  opacity: 0;
+  animation-name: appearHalf;
+  animation-delay: 2s;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  z-index: 100;
 }
 
-#nextButton {
+#navigation {
   display: none;
 }
 
@@ -75,7 +91,36 @@ body {
 }
 
 .name {
-  font-size: 125px;
+  font-family: 'Halant';
+  font-weight: 300;
+  font-size: 90px;
+}
+
+
+@media (min-width: 480px) {
+  .name {
+    font-size: 110px;
+  }
+  .header {
+    font-size: 60px;
+  }
+
+  #nextButton {
+    display: none;
+  }
+  #navigation {
+    display: inline-block;
+    margin-left: 40px;
+  }
+}
+
+@media (min-width: 770px) {
+  .name {
+    font-size: 125px;
+  }
+  .header {
+    font-size: 75px;
+  }
 }
 
 .navlink {
@@ -161,23 +206,34 @@ ul {
   }
 }
 
-@media (max-width: 520px) {
-  #navigation {
-    display: none;
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
   }
-  #nextButton {
-    display: block;
-    position: fixed;
-    bottom: 25px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    height: 25px;
-    opacity: 0;
-    animation-name: appearHalf;
-    animation-delay: 2s;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    z-index: 100;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
   }
 }
