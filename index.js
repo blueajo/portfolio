@@ -1,3 +1,4 @@
+// maps each section to its color
 var colorMap = new Map();
 colorMap.set('Blue', 'rgba(255,255,255,0)');
 colorMap.set('About', 'red');
@@ -5,12 +6,14 @@ colorMap.set('Coursework', 'purple');
 colorMap.set('Skills', 'orange');
 colorMap.set('Experience', 'green');
 
+// delays the static positioning of the site upon load
 $(document).ready(function() {
   setTimeout(function() {
     $('#site').css({position: 'static'})
-  }, 2040);
+  }, 1830);
 });
 
+// handles scroll-based animations
 (function () {
   var body = window.document.body;
   var box = document.getElementById('fadeup');
@@ -66,6 +69,7 @@ $(document).ready(function() {
   });
 }());
 
+// handles smooth scrolling when clicking on # links
 $('a[href^="#"]').on('click', function(event) {
 
     var target = $(this.getAttribute('href'));
@@ -79,8 +83,8 @@ $('a[href^="#"]').on('click', function(event) {
 
 });
 
+// handles smooth scrolling when in iphone view
 function next() {
-
   var t = window.document.body.scrollTop;
   var target;
 
@@ -101,3 +105,32 @@ function next() {
       }, 300);
   }
 }
+
+// tries to determine whether the user is using touch or mouse in order to deal width
+// problems with hover support on touchscreen devices
+(function(){
+    var isTouch = false //var to indicate current input type (is touch versus no touch)
+    var isTouchTimer
+    var curRootClass = '' //var indicating current document root class ("can-touch" or "")
+
+    function addtouchclass(e){
+        clearTimeout(isTouchTimer)
+        isTouch = true
+        if (curRootClass != 'can-touch'){ //add "can-touch' class if it's not already present
+            curRootClass = 'can-touch'
+            document.documentElement.classList.add(curRootClass)
+        }
+        isTouchTimer = setTimeout(function(){isTouch = false}, 500) //maintain "istouch" state for 500ms so removetouchclass doesn't get fired immediately following a touch event
+    }
+
+    function removetouchclass(e){
+        if (!isTouch && curRootClass == 'can-touch'){ //remove 'can-touch' class if not triggered by a touch event and class is present
+            isTouch = false
+            curRootClass = ''
+            document.documentElement.classList.remove('can-touch')
+        }
+    }
+
+    document.addEventListener('touchstart', addtouchclass, false) //this event only gets called when input type is touch
+    document.addEventListener('mouseover', removetouchclass, false) //this event gets called when input type is everything from touch to mouse/ trackpad
+})();

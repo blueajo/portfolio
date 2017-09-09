@@ -1,2 +1,2 @@
-# bluejo.com
+# portfolio
 Blue Jo's personal portfolio

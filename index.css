@@ -1,6 +1,6 @@
 body {
   font-family: 'Halant', serif;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .header {
@@ -8,7 +8,7 @@ body {
   font-size: 50px;
   margin: 0px;
   padding: 0px;
-  font-family: 'Dosis';
+  font-family: 'Amatic SC';
   font-weight: 300;
 }
 
@@ -17,10 +17,6 @@ body {
   padding-top: 200px;
   margin: 0px;
   z-index: 9;
-}
-
-.content {
-  font-size: 16px;
 }
 
 #header {
@@ -91,20 +87,30 @@ body {
 }
 
 .name {
-  font-family: 'Halant';
+  font-family: 'Amatic SC';
   font-weight: 300;
   font-size: 90px;
 }
 
+.button {
+  height: 30px;
+  width: 30px;
+}
 
 @media (min-width: 480px) {
   .name {
-    font-size: 110px;
+    font-size: 130px;
   }
   .header {
-    font-size: 60px;
+    font-size: 75px;
   }
-
+  body {
+    font-size: 16px;
+  }
+  .button {
+    height: 50px;
+    width: 50px;
+  }
   #nextButton {
     display: none;
   }
@@ -114,18 +120,8 @@ body {
   }
 }
 
-@media (min-width: 770px) {
-  .name {
-    font-size: 125px;
-  }
-  .header {
-    font-size: 75px;
-  }
-}
-
 .navlink {
   color: black;
-  font-size: 16px;
   text-decoration: none;
   display: block;
 }
@@ -133,7 +129,7 @@ body {
 #AboutLink {
   opacity: 0;
   animation-name: appear;
-  animation-delay: 2s;
+  animation-delay: 1.6s;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
 }
@@ -141,7 +137,7 @@ body {
 #CourseworkLink {
   opacity: 0;
   animation-name: appear;
-  animation-delay: 2.3s;
+  animation-delay: 1.7s;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
 }
@@ -149,7 +145,7 @@ body {
 #SkillsLink {
   opacity: 0;
   animation-name: appear;
-  animation-delay: 2.5s;
+  animation-delay: 1.8s;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
 }
@@ -157,29 +153,34 @@ body {
 #ExperienceLink {
   opacity: 0;
   animation-name: appear;
-  animation-delay: 2.6s;
+  animation-delay: 1.83s;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
 }
 
-#AboutLink:hover {
+html.can-touch #AboutLink:hover {
   color: red;
   text-decoration: none;
 }
 
-#CourseworkLink:hover {
+html.can-touch #CourseworkLink:hover {
   color: purple;
   text-decoration: none;
 }
 
-#SkillsLink:hover {
+html.can-touch #SkillsLink:hover {
   color: orange;
   text-decoration: none;
 }
 
-#ExperienceLink:hover {
+html.can-touch #ExperienceLink:hover {
   color: green;
   text-decoration: none;
+}
+
+html.can-touch .glow-button:hover {
+  -webkit-filter: drop-shadow(0px 0px 5px rgba(255, 199, 0, 0.3));
+  filter: drop-shadow(0px 0px 5px rgba(255, 199, 0, 0.3));
 }
 
 ul {
