@@ -86,6 +86,12 @@ body {
   animation-play-state: paused;
 }
 
+.button:hover {
+  -moz-transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
 .name {
   font-family: 'Amatic SC';
   font-weight: 300;
@@ -93,8 +99,8 @@ body {
 }
 
 .button {
-  height: 30px;
   width: 30px;
+  margin-right: 10px;
 }
 
 @media (min-width: 480px) {
@@ -108,8 +114,8 @@ body {
     font-size: 16px;
   }
   .button {
-    height: 50px;
     width: 50px;
+    margin-right: 15px;
   }
   #nextButton {
     display: none;
@@ -176,11 +182,6 @@ body {
 #ExperienceLink:hover {
   color: green;
   text-decoration: none;
-}
-
-.glow-button:hover {
-  -webkit-filter: drop-shadow(0px 0px 5px rgba(255, 199, 0, 0.3));
-  filter: drop-shadow(0px 0px 5px rgba(255, 199, 0, 0.3));
 }
 
 ul {
