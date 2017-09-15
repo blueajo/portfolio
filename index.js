@@ -23,8 +23,9 @@ $(window).on('load', function() {
     $('#ProjectsLink').animate({opacity: 1}, 500, "swing")
   }, 1830);
   setTimeout(function() {
+    $('#nextButton').css({animationPlayState: "running"});
     $('#body').css({position: 'static'})
-  }, 1830);
+  }, 1600);
 });
 
 // handles scroll-based animations
