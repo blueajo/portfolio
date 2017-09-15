@@ -2,14 +2,14 @@
 var colorMap = new Map();
 colorMap.set('Blue', 'rgba(255,255,255,0)');
 colorMap.set('About', 'red');
-colorMap.set('Coursework', 'purple');
+colorMap.set('Education', 'purple');
 colorMap.set('Skills', 'orange');
-colorMap.set('Experience', 'green');
+colorMap.set('Projects', 'green');
 
 // delays the static positioning of the site upon load
 $(document).ready(function() {
   setTimeout(function() {
-    $('#site').css({position: 'static'})
+    $('#body').css({position: 'static'})
   }, 1830);
 });
 
@@ -24,28 +24,28 @@ $(document).ready(function() {
     var color1;
     var color2;
 
-    var textVisibleDelay = -(t / 700);
-    if(textVisibleDelay < -.99) {
-      textVisibleDelay = -.99;
+    var bodyVisibleDelay = -(t / 700);
+    if(bodyVisibleDelay < -.99) {
+      bodyVisibleDelay = -.99;
     }
-    document.getElementById('text').style.animationDelay = textVisibleDelay + 's';
+    document.getElementById('body').style.animationDelay = bodyVisibleDelay + 's';
 
     if (t < $('#About').offset().top) {
       color1 = colorMap.get('Blue');
       color2 = colorMap.get('About');
       t = t / $('#About').offset().top;
-    } else if (t < $('#Coursework').offset().top) {
+    } else if (t < $('#Education').offset().top) {
       color1 = colorMap.get('About');
-      color2 = colorMap.get('Coursework');
-      t = (t - $('#About').offset().top) / ($('#Coursework').offset().top - $('#About').offset().top);
+      color2 = colorMap.get('Education');
+      t = (t - $('#About').offset().top) / ($('#Education').offset().top - $('#About').offset().top);
     } else if (t < $('#Skills').offset().top) {
-      color1 = colorMap.get('Coursework');
+      color1 = colorMap.get('Education');
       color2 = colorMap.get('Skills');
-      t = (t - $('#Coursework').offset().top) / ($('#Skills').offset().top - $('#Coursework').offset().top);
+      t = (t - $('#Education').offset().top) / ($('#Skills').offset().top - $('#Education').offset().top);
     } else {
       color1 = colorMap.get('Skills');
-      color2 = colorMap.get('Experience');
-      t = (t - $('#Skills').offset().top) / ($('#Experience').offset().top - $('#Skills').offset().top);
+      color2 = colorMap.get('Projects');
+      t = (t - $('#Skills').offset().top) / ($('#Projects').offset().top - $('#Skills').offset().top);
     }
 
     t = 100 - 200 * t;
@@ -90,12 +90,12 @@ function next() {
 
   if (t < $('#About').offset().top - 1) {
     target = "#About";
-  } else if (t < $('#Coursework').offset().top - 1) {
-    target = "#Coursework";
+  } else if (t < $('#Education').offset().top - 1) {
+    target = "#Education";
   } else if (t < $('#Skills').offset().top - 1) {
     target = "#Skills";
   } else {
-    target = "#Experience";
+    target = "#Projects";
   }
 
   if( target.length ) {

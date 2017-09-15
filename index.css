@@ -1,6 +1,8 @@
 body {
   font-family: 'Halant', serif;
   font-size: 12px;
+  padding: 0;
+  margin: 0;
 }
 
 .header {
@@ -9,7 +11,7 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: 'Amatic SC';
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .sec {
@@ -17,15 +19,29 @@ body {
   padding-top: 200px;
   margin: 0px;
   z-index: 9;
+  text-align: center;
 }
 
 #header {
-  background-image: linear-gradient(rgba(255,255,255,1) 60%, rgba(255,255,255,0));
-  padding-bottom: 100px;
+  background-color: white;
+  padding-bottom: 10px;
   position: -webkit-sticky;
   position: sticky;
+  opacity: 0.95;
   top: 0;
   z-index: 100;
+  width: 100%;
+}
+
+#headerContent {
+  margin: 0 auto;
+  position: relative;
+  max-width: 200px;
+  opacity: 0;
+  animation-name: appear;
+  animation-delay: 0s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
 }
 
 #blue {
@@ -49,15 +65,6 @@ body {
   background-image: linear-gradient(rgba(255,0,0,0) 100%, rgba(255,0,0,1));
 }
 
-#site {
-  opacity: 0;
-  position: fixed;
-  animation-name: appear;
-  animation-delay: 0s;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-}
-
 #nextButton {
   display: block;
   position: fixed;
@@ -78,12 +85,42 @@ body {
   display: none;
 }
 
-#text {
+#body {
   opacity: 0;
+  position: fixed;
   animation-name: appear;
   animation-delay: 0;
   animation-duration: 1s;
   animation-play-state: paused;
+}
+
+#footer {
+  height: 50px;
+  width: 100%;
+  opacity: .50;
+  margin: 0;
+  padding: 0;
+  margin-top: 25px;
+}
+
+#footer p {
+  font-family: 'Amatic SC';
+  font-weight: 400;
+  font-size: 16px;
+  color: black;
+  text-align:center;
+  vertical-align: middle;
+  line-height: 50px;
+}
+
+#buttons {
+  display: inline;
+}
+
+.button {
+  width: 25px;
+  margin-right: 3px;
+  vertical-align: middle;
 }
 
 .button:hover {
@@ -94,18 +131,105 @@ body {
 
 .name {
   font-family: 'Amatic SC';
-  font-weight: 300;
+  font-weight: 400;
   font-size: 90px;
 }
 
-.button {
-  width: 30px;
-  margin-right: 10px;
+.navlink {
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+
+.about_img {
+  display:inline;
+  width: 75px;
+  vertical-align: middle;
+  padding: 5px;
+}
+
+.school_img {
+  height: 55px;
+  padding: 5px;
+}
+
+.school_name {
+  font-size: 25px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Amatic SC';
+  font-weight: 400;
+}
+
+.school_header p {
+  margin: 0;
+  color: gray;
+  text-align: center;
+  padding: 0;
+}
+
+.project {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 1px #888888;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.project img {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.projectHeading {
+  font-family: 'Amatic SC';
+  font-weight: 400;
+  font-size: 25px;
+  padding: 0;
+  margin: 0;
+}
+
+.projectContent {
+  padding: 15px;
+  margin: 0;
+}
+
+.projectBody a {
+  text-decoration: none;
+  color: rgb(79, 194, 248);
+}
+
+.skill {
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-size: 8px;
+  display: inline;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 1px;
+  margin: 2px;
+  padding: 5px;
+}
+
+.language {
+  color: rgb(79, 194, 248);
+  border-color: rgb(79, 194, 248);
+}
+
+.other {
+  color: rgb(29, 233, 182);
+  border-color: rgb(29, 233, 182);
 }
 
 @media (min-width: 480px) {
   .name {
     font-size: 130px;
+  }
+  #headerContent {
+    max-width: 390px;
   }
   .header {
     font-size: 75px;
@@ -114,8 +238,8 @@ body {
     font-size: 16px;
   }
   .button {
-    width: 50px;
-    margin-right: 15px;
+    width: 30px;
+    margin-right: 5px;
   }
   #nextButton {
     display: none;
@@ -124,12 +248,28 @@ body {
     display: inline-block;
     margin-left: 40px;
   }
-}
-
-.navlink {
-  color: black;
-  text-decoration: none;
-  display: block;
+  .school_img {
+    height: 65px;
+    padding: 5px;
+    vertical-align: text-bottom;
+  }
+  .school_name {
+    font-size: 30px;
+    text-align: left;
+  }
+  .school_header {
+    display: inline-block;
+    margin-top: 30px;
+  }
+  .school_header p {
+    text-align: left;
+  }
+  .projectHeading {
+    font-size: 30px;
+  }
+  .skill {
+    font-size: 10px;
+  }
 }
 
 #AboutLink {
@@ -140,7 +280,7 @@ body {
   animation-fill-mode: forwards;
 }
 
-#CourseworkLink {
+#EducationLink {
   opacity: 0;
   animation-name: appear;
   animation-delay: 1.7s;
@@ -156,7 +296,7 @@ body {
   animation-fill-mode: forwards;
 }
 
-#ExperienceLink {
+#ProjectsLink {
   opacity: 0;
   animation-name: appear;
   animation-delay: 1.83s;
@@ -169,7 +309,7 @@ body {
   text-decoration: none;
 }
 
-#CourseworkLink:hover {
+#EducationLink:hover {
   color: purple;
   text-decoration: none;
 }
@@ -179,7 +319,7 @@ body {
   text-decoration: none;
 }
 
-#ExperienceLink:hover {
+#ProjectsLink:hover {
   color: green;
   text-decoration: none;
 }
@@ -213,29 +353,10 @@ ul {
   margin-left: auto;
   padding-right: 15px;
   padding-left: 15px;
-  width: 100%;
 }
 
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
   }
 }

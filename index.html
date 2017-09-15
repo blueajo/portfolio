@@ -12,54 +12,63 @@
   <link rel="manifest" href="./images/favicons/manifest.json">
   <link rel="mask-icon" href="./images/favicons/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="theme-color" content="#ffffff">
-  <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400|Halant:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300|Amatic+SC:400|Halant:300" rel="stylesheet">
   <link href="./index.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
 
-  <div class="container">
-
   <div id="spacer" style="height:35vh;"></div>
 
-  <div id="site">
-
   <div id="header">
-    <h1 class="name" id='blue'>blue</h1>
-    <h1 class="name" id='jo'>jo</h1>
-    <div id="navigation">
-      <a class="navlink" id="AboutLink" href="#About">about</a>
-      <a class="navlink" id="CourseworkLink" href="#Coursework">coursework</a>
-      <a class="navlink" id="SkillsLink" href="#Skills">skills</a>
-      <a class="navlink" id="ExperienceLink" href="#Experience">experience</a>
+    <div id="headerContent">
+      <h1 class="name" id='blue'>blue</h1>
+      <h1 class="name" id='jo'>jo</h1>
+      <div id="navigation">
+        <a class="navlink" id="AboutLink" href="#About">about</a>
+        <a class="navlink" id="EducationLink" href="#Education">education</a>
+        <a class="navlink" id="SkillsLink" href="#Skills">skills</a>
+        <a class="navlink" id="ProjectsLink" href="#Projects">projects</a>
+      </div>
     </div>
   </div>
 
   <img id="nextButton" src="./images/icons/next_arrow.png" onclick="next()" />
 
-  <div id ="text">
+  <div id ="body" class="container">
 
   <div id="About" class="sec">
-    <h2 class="header">about</h2>
-    <p>Hi, I'm Blue Jo, currently a computer science major at the University of Washington.
-      When I'm not doing something school related, you might find me</p>
-    <p>Browsing the latest architecture news</p>
-    <p>With friends, exchanging new musical discoveries</p>
-    <p>Burning my tongue on a steaming cup of coffee</p>
-    <p>Or playing with my silly dog, Tedi.</p>
-    <p>While I can't truthfully say that I am passionate about things like debugging and code quality,
-      I am very excited about the ways that computer science can be applied to make life more rich and enjoyable.</p>
-    <div id="buttons">
+    <h2 class="header">
+      about
+    </h2>
+    <p id="buttons">
       <a href="https://github.com/blueajo" target="_blank"><img src="images/icons/github.gif"
-        alt="github icon" title="github" class="button" /></a>
+        alt="github icon" title="github" class="button" /></a>.
       <a href="https://www.linkedin.com/in/bluejo" target="_blank"><img src="images/icons/linkedin.gif"
-        alt="linkedin icon" title="linkedin" class="button" /></a>
+        alt="linkedin icon" title="linkedin" class="button" /></a>.
       <a href="mailto:blueajo@gmail.com" target="_blank"><img src="images/icons/email.gif"
-        alt="email icon" title="email Blue" class="button" /></a>
-    </div>
+        alt="email icon" title="email Blue" class="button" /></a>.
+      <a href="./downloads/resume.pdf" download><img src="images/icons/resume.gif"
+        alt="resume icon" title="resume" class="button" /></a>
+    </p>
+    <p><br>Hi, I'm Blue Jo, currently a computer science major at the University of Washington.
+      If I'm not doing something school related, you might find me:<br><br>
+      <img class="about_img" src="./images/magazine.png" />browsing the latest architecture news,<br>
+      exchanging musical discoveries with friends, <img class="about_img" src="./images/earbuds.png" /><br>
+      <img class="about_img" src="./images/coffee.png" /> burning my tongue on a steaming cup of coffee,<br>
+      or playing with my dog, Tedi. <img class="about_img" src="./images/tedi.png" /><br><br>
+      While I can't truthfully say that I am passionate about things like debugging and code quality,
+      I am very excited about the ways that computer science can be applied to make life more rich and enjoyable.
+    </p>
   </div>
 
-  <div id="Coursework" class="sec">
-    <h2 class="header">coursework</h2>
+  <div id="Education" class="sec">
+    <h2 class="header">education</h2>
+    <img src="./images/UW.png" class="school_img"/>
+    <div class="school_header">
+      <h4 class="school_name">University of Washington</h4>
+      <p>2016-2020, Bachelors in Computer Science</p>
+    </div>
+    <h4>Coursework</h4>
     <ul class="content">
       <li>Data Structures and Parallelism</li>
       <li>Foundations of Computing I</li>
@@ -79,21 +88,53 @@
     </ul>
   </div>
 
-  <div id="Experience" class="sec" style="min-height:100vh;">
-    <h2 class="header">experience</h2>
+  <div id="Projects" class="sec" style="min-height:100vh;">
+    <h2 class="header">projects</h2>
     <h4>Class Projects</h4>
-    <ul class="content">
-      <li>Built a "google maps" application for UW which displays a map of campus and the shortest path between any two buildings on the map. (Java)</li>
-      <li>Implemented malloc. (C)</li>
-      <li>Implemented a hash map and AVL tree without the use of Java data structures. (Java)</li>
-    </ul>
+    <div class="project">
+      <img src="./images/CampusPaths.png" />
+      <div class="projectContent">
+        <h4 class="projectHeading">UW Campus Map</h4>
+        <p class="projectBody">
+          For the final project in my Software Design and Implementation class, I made a
+          "google maps" application for the UW campus which displays a map of campus and the shortest path
+          between any two buildings on the map. Over the course of the project, I wrote hundreds of unit tests.
+          <a href="./downloads/CampusPaths.jar" download>Download the jar.</a>
+        </p>
+        <div>
+          <p class="skill language">JAVA</p>
+          <p class="skill other">SWING</p>
+          <p class="skill other">JUNIT</p>
+        </div>
+      </div>
+    </div>
     <h4>Research</h4>
-    <ul class="content">
-      <li>Digestif: Helped implement an online tool to encourage researchers to create "digestif" pages for their online experiments. <a href="http://students.washington.edu/emjun/digestif/" target="_blank">Link to the protoype</li>
-    </ul>
+    <div class="project">
+      <img src="./images/digestif.png" />
+      <div class="projectContent">
+        <h4 class="projectHeading">Digestif</h4>
+        <p class="projectBody">
+          With a graduate student in the UW HCI lab, I helped implement an
+          online tool to encourage researchers to create "digestif," or conclusion pages
+          for their online experiments. This project was made to support a series
+          of papers about conclusion pages, their benefits, and how to promote their use.
+          <a href="http://students.washington.edu/emjun/digestif/" target="_blank">Check out the prototype.</a>
+        </p>
+        <div>
+          <p class="skill language">HTML</p>
+          <p class="skill language">CSS</p>
+          <p class="skill language">JAVASCRIPT</p>
+          <p class="skill other">JQUERY</p>
+          <p class="skill other">BOOTSTRAP</p>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <div id="footer">
+    <p>&copy 2017 Blue Jo</p>
   </div>
-  </div>
+
   </div>
 
 <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
