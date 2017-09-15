@@ -57,10 +57,7 @@ ul {
   -webkit-background-clip: text;
   background-clip: text;
   background-image: url("./images/intro_water.gif");
-  animation-name: appear;
-  animation-delay: 0s;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
+  opacity: 0;
   padding: 0;
   border: 3px solid white;
   background-size: auto 90%;
@@ -75,38 +72,6 @@ ul {
   background-clip: text;
   background-image: linear-gradient(rgba(255,0,0,0) 100%, rgba(255,0,0,1));
   border: 3px solid white;
-}
-
-#AboutLink {
-  opacity: 0;
-  animation-name: appear;
-  animation-delay: 1.6s;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-}
-
-#EducationLink {
-  opacity: 0;
-  animation-name: appear;
-  animation-delay: 1.7s;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-}
-
-#SkillsLink {
-  opacity: 0;
-  animation-name: appear;
-  animation-delay: 1.8s;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-}
-
-#ProjectsLink {
-  opacity: 0;
-  animation-name: appear;
-  animation-delay: 1.83s;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
 }
 
 #AboutLink:hover {
@@ -184,6 +149,7 @@ ul {
   color: black;
   text-decoration: none;
   display: block;
+  opacity: 0;
 }
 
 .about_img1 {

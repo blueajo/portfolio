@@ -7,7 +7,20 @@ colorMap.set('Skills', 'orange');
 colorMap.set('Projects', 'green');
 
 // delays the static positioning of the site upon load
-$(document).ready(function() {
+$(window).on('load', function() {
+  $('#blue').animate({opacity: 1}, 1000, "swing");
+  setTimeout(function() {
+    $('#AboutLink').animate({opacity: 1}, 500, "swing")
+  }, 1600);
+  setTimeout(function() {
+    $('#EducationLink').animate({opacity: 1}, 500, "swing")
+  }, 1700);
+  setTimeout(function() {
+    $('#SkillsLink').animate({opacity: 1}, 500, "swing")
+  }, 1800);
+  setTimeout(function() {
+    $('#ProjectsLink').animate({opacity: 1}, 500, "swing")
+  }, 1830);
   setTimeout(function() {
     $('#body').css({position: 'static'})
   }, 1830);
