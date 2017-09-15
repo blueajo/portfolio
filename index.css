@@ -1,8 +1,15 @@
 body {
   font-family: 'Halant', serif;
+  font-weight: 300;
   font-size: 12px;
   padding: 0;
   margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 .header {
@@ -65,6 +72,58 @@ body {
   background-image: linear-gradient(rgba(255,0,0,0) 100%, rgba(255,0,0,1));
 }
 
+#AboutLink {
+  opacity: 0;
+  animation-name: appear;
+  animation-delay: 1.6s;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+#EducationLink {
+  opacity: 0;
+  animation-name: appear;
+  animation-delay: 1.7s;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+#SkillsLink {
+  opacity: 0;
+  animation-name: appear;
+  animation-delay: 1.8s;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+#ProjectsLink {
+  opacity: 0;
+  animation-name: appear;
+  animation-delay: 1.83s;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+#AboutLink:hover {
+  color: red;
+  text-decoration: none;
+}
+
+#EducationLink:hover {
+  color: purple;
+  text-decoration: none;
+}
+
+#SkillsLink:hover {
+  color: orange;
+  text-decoration: none;
+}
+
+#ProjectsLink:hover {
+  color: green;
+  text-decoration: none;
+}
+
 #nextButton {
   display: block;
   position: fixed;
@@ -92,25 +151,6 @@ body {
   animation-delay: 0;
   animation-duration: 1s;
   animation-play-state: paused;
-}
-
-#footer {
-  height: 50px;
-  width: 100%;
-  opacity: .50;
-  margin: 0;
-  padding: 0;
-  margin-top: 25px;
-}
-
-#footer p {
-  font-family: 'Amatic SC';
-  font-weight: 400;
-  font-size: 16px;
-  color: black;
-  text-align:center;
-  vertical-align: middle;
-  line-height: 50px;
 }
 
 #buttons {
@@ -224,6 +264,25 @@ body {
   border-color: rgb(29, 233, 182);
 }
 
+#footer {
+  height: 50px;
+  width: 100%;
+  opacity: .50;
+  margin: 0;
+  padding: 0;
+  margin-top: 25px;
+}
+
+#footer p {
+  font-family: 'Amatic SC';
+  font-weight: 400;
+  font-size: 16px;
+  color: black;
+  text-align:center;
+  vertical-align: middle;
+  line-height: 50px;
+}
+
 @media (min-width: 480px) {
   .name {
     font-size: 130px;
@@ -272,62 +331,17 @@ body {
   }
 }
 
-#AboutLink {
-  opacity: 0;
-  animation-name: appear;
-  animation-delay: 1.6s;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
-#EducationLink {
-  opacity: 0;
-  animation-name: appear;
-  animation-delay: 1.7s;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-}
-
-#SkillsLink {
-  opacity: 0;
-  animation-name: appear;
-  animation-delay: 1.8s;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-}
-
-#ProjectsLink {
-  opacity: 0;
-  animation-name: appear;
-  animation-delay: 1.83s;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-}
-
-#AboutLink:hover {
-  color: red;
-  text-decoration: none;
-}
-
-#EducationLink:hover {
-  color: purple;
-  text-decoration: none;
-}
-
-#SkillsLink:hover {
-  color: orange;
-  text-decoration: none;
-}
-
-#ProjectsLink:hover {
-  color: green;
-  text-decoration: none;
-}
-
-ul {
-  list-style-type: none;
-  margin-left: 0;
-  padding-left: 0;
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
 }
 
 @keyframes appear {
@@ -345,18 +359,5 @@ ul {
   }
   100% {
     opacity: .5;
-  }
-}
-
-.container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
   }
 }
