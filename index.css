@@ -33,6 +33,9 @@ ul {
   background-color: white;
   padding-bottom: 10px;
   position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
   position: sticky;
   opacity: 0.95;
   top: 0;
@@ -60,8 +63,6 @@ ul {
   opacity: 0;
   padding: 0;
   border: 3px solid white;
-  background-size: auto 90%;
-  background-position: left bottom;
 }
 
 #jo {
@@ -233,13 +234,13 @@ ul {
 }
 
 .language {
-  color: rgb(79, 194, 248);
+  color: rgb(0, 173, 255);
   border-color: rgb(79, 194, 248);
 }
 
 .other {
-  color: rgb(29, 233, 182);
-  border-color: rgb(29, 233, 182);
+  color: rgb(0, 226, 169);
+  border-color: rgb(0, 226, 169);
 }
 
 #footer {

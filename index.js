@@ -30,12 +30,10 @@ $(window).on('load', function() {
 
 // handles scroll-based animations
 (function () {
-  var body = window.document.body;
-  var box = document.getElementById('fadeup');
 
   var handleScroll = function () {
-    var t = body.scrollTop;
-
+    var t = document.documentElement.scrollTop || document.body.scrollTop;
+    
     var color1;
     var color2;
 
@@ -43,6 +41,7 @@ $(window).on('load', function() {
     if(bodyVisibleDelay < -.99) {
       bodyVisibleDelay = -.99;
     }
+
     document.getElementById('body').style.animationDelay = bodyVisibleDelay + 's';
 
     if (t < $('#About').offset().top) {
