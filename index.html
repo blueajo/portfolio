@@ -18,8 +18,8 @@
 </head>
 <body>
 
-  <!-- Spacer: offsets height of header on load -->
-  <div id="spacer" style="height:35vh;"></div>
+  <!-- Spacer: offsets height of header -->
+  <div class="spacer" style="height:35vh;"></div>
 
   <!-- loading spinner -->
   <div id="spinner">
@@ -27,6 +27,8 @@
     <div id="double-bounce2"></div>
   </div>
 
+  <!-- For sticky top positioning -->
+  <div id="headerPosition">
   <!-- Header and Navbar -->
   <div id="header">
     <div id="headerContent">
@@ -41,6 +43,9 @@
       </div>
     </div>
   </div>
+
+  <!-- Spacer: offsets height of body on load -->
+  <div class="spacer" style="height:250px;"></div>
 
   <!-- Navigation button for mobile view -->
   <img id="nextButton" src="./images/icons/next_arrow.png" onclick="next()" />

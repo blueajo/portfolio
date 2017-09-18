@@ -33,16 +33,28 @@ $(window).on('load', function() {
 
   var handleScroll = function () {
     var t = document.documentElement.scrollTop || document.body.scrollTop;
-    
+
+
+    if (t >= $('#headerPosition').offset().top) {
+      // stick the div
+      document.getElementById('header').classList.add("stick");
+    } else {
+      // release the div
+      document.getElementById('header').classList.remove("stick");
+    }
+
     var color1;
     var color2;
 
-    var bodyVisibleDelay = -(t / 700);
-    if(bodyVisibleDelay < -.99) {
-      bodyVisibleDelay = -.99;
+    var bodyOpacity = (t / 400);
+    if(bodyOpacity >= 1) {
+      bodyOpacity = 1;
+    }
+    if(bodyOpacity <= 0) {
+      bodyOpacity = 0;
     }
 
-    document.getElementById('body').style.animationDelay = bodyVisibleDelay + 's';
+    document.getElementById('body').style.opacity = bodyOpacity;
 
     if (t < $('#About').offset().top) {
       color1 = colorMap.get('Blue');
