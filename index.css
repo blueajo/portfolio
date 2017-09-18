@@ -44,6 +44,17 @@ ul {
   top: 0;
 }
 
+@supports (position: sticky) or (position: -webkit-sticky) {
+  #header {
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+  }
+  #spacer2 {
+    display: none;
+  }
+}
+
 #headerContent {
   margin: 0 auto;
   position: relative;
