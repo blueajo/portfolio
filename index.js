@@ -11,20 +11,20 @@ $(window).on('load', function() {
   $('#spinner').animate({opacity: 0}, 500, "swing");
   $('#headerContent').animate({opacity: 1}, 1000, "swing");
   setTimeout(function() {
-    $('#AboutLink').animate({opacity: 1}, 500, "swing")
+    $('#AboutLink').animate({opacity: 1}, 500, "swing");
   }, 1600);
   setTimeout(function() {
-    $('#EducationLink').animate({opacity: 1}, 500, "swing")
+    $('#EducationLink').animate({opacity: 1}, 500, "swing");
   }, 1700);
   setTimeout(function() {
-    $('#SkillsLink').animate({opacity: 1}, 500, "swing")
+    $('#SkillsLink').animate({opacity: 1}, 500, "swing");
   }, 1800);
   setTimeout(function() {
-    $('#ProjectsLink').animate({opacity: 1}, 500, "swing")
+    $('#ProjectsLink').animate({opacity: 1}, 500, "swing");
   }, 1830);
   setTimeout(function() {
     $('#nextButton').css({animationPlayState: "running"});
-    $('#body').css({position: 'static'})
+    $('#body').css({position: 'static'});
   }, 1600);
 });
 
