@@ -9,7 +9,7 @@ colorMap.set('Projects', 'green');
 // delays the static positioning of the site upon load
 $(window).on('load', function() {
   $('#spinner').animate({opacity: 0}, 500, "swing");
-  $('#blue').animate({opacity: 1}, 1000, "swing");
+  $('#headerContent').animate({opacity: 1}, 1000, "swing");
   setTimeout(function() {
     $('#AboutLink').animate({opacity: 1}, 500, "swing")
   }, 1600);

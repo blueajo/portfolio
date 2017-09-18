@@ -48,27 +48,37 @@ ul {
   margin: 0 auto;
   position: relative;
   max-width: 200px;
+  opacity: 0;
 }
 
 #blue {
+  color: blue;
   display: inline;
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  background-image: url("./images/intro_water.gif");
-  opacity: 0;
   padding: 0;
   border: 3px solid white;
 }
 
 #jo {
+  color: blue;
   display: inline;
   margin-left: 25px;
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  background-image: linear-gradient(rgba(255,0,0,0) 100%, rgba(255,0,0,1));
   border: 3px solid white;
+}
+
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+  #blue {
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: url("./images/intro_water.gif");
+  }
+
+  #jo {
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(rgba(255,0,0,0) 100%, rgba(255,0,0,1));
+  }
 }
 
 #AboutLink:hover {
