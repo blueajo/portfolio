@@ -1,10 +1,5 @@
 // maps each section to its color
-var colorMap = new Map();
-colorMap.set('Blue', 'rgba(255,255,255,0)');
-colorMap.set('About', 'red');
-colorMap.set('Education', 'purple');
-colorMap.set('Skills', 'orange');
-colorMap.set('Projects', 'green');
+var colorMap = ['rgba(255,255,255,0)', 'red', 'purple', 'orange', 'green'];
 
 // delays the static positioning of the site upon load
 $(window).on('load', function() {
@@ -85,20 +80,20 @@ function colorChange(t) {
   var color2;
 
   if (t < $('#About').offset().top) {
-    color1 = colorMap.get('Blue');
-    color2 = colorMap.get('About');
+    color1 = colorMap[0];
+    color2 = colorMap[1];
     t = t / $('#About').offset().top;
   } else if (t < $('#Education').offset().top) {
-    color1 = colorMap.get('About');
-    color2 = colorMap.get('Education');
+    color1 = colorMap[1];
+    color2 = colorMap[2];
     t = (t - $('#About').offset().top) / ($('#Education').offset().top - $('#About').offset().top);
   } else if (t < $('#Skills').offset().top) {
-    color1 = colorMap.get('Education');
-    color2 = colorMap.get('Skills');
+    color1 = colorMap[2];
+    color2 = colorMap[3];
     t = (t - $('#Education').offset().top) / ($('#Skills').offset().top - $('#Education').offset().top);
   } else {
-    color1 = colorMap.get('Skills');
-    color2 = colorMap.get('Projects');
+    color1 = colorMap[3];
+    color2 = colorMap[4];
     t = (t - $('#Skills').offset().top) / ($('#Projects').offset().top - $('#Skills').offset().top);
   }
 
