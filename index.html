@@ -32,8 +32,7 @@
   <!-- Header and Navbar -->
   <div id="header">
     <div id="headerContent">
-      <h1 class="name" id='blue'>blue</h1>
-      <h1 class="name" id='jo'>jo</h1>
+      <h1 class="name" id='blue'>blue jo</h1>
       <!-- Navigation bar -->
       <div id="navigation">
         <a class="navlink" id="AboutLink" href="#About">about</a>
@@ -51,7 +50,7 @@
   <img id="nextButton" src="./images/icons/next_arrow.png" onclick="next()" />
 
   <!-- Site Body -->
-  <div id="body" class="container">
+  <div id="site_body" class="container invisible">
 
     <!-- About -->
     <div id="About" class="sec">
@@ -70,23 +69,25 @@
           alt="resume icon" title="resume" class="button" /></a>
       </p>
       <!-- About text. about_img1 appears in mobile view, about_img2 appears in regular view -->
-      <p><br>Hi, I'm Blue Jo, currently a computer science major at the University of Washington.
-        If I'm not doing something school related, you might find me:<br><br>
+      <p><br>Hi, I'm Blue Jo, a computer science major at the University of Washington.
+        In my free time, you might find me:<br><br>
         <img class="about_img1" src="./images/magazine.png" />
         <img class="about_img2" src="./images/magazine.png" />
-        browsing the latest architecture news,<br>
+        reading about design and architecture,<br>
         <img class="about_img1" src="./images/earbuds.png" />
         exchanging musical discoveries with friends,
         <img class="about_img2" src="./images/earbuds.png" /><br>
         <img class="about_img1" src="./images/coffee.png" />
         <img class="about_img2" src="./images/coffee.png" />
-        burning my tongue on a steaming cup of coffee,<br>
+        burning my tongue on a cup of coffee,<br>
         <img class="about_img1" src="./images/tedi.png" />
-        or playing with my dog, Tedi.
+        or hanging out with my dog, Tedi.
         <img class="about_img2" src="./images/tedi.png" /><br><br>
-        Whether it be through advances in food production, healthcare,
-        or culturally-sensitive design, I am very excited about the potential of
-        technology to make peoples' lives more rich, meaningful, and fair.
+        I also work with UW assistant professor
+        <a href="https://www.cs.washington.edu/people/faculty/reinecke" target="_blank" style="color:black;">Katharina Reinecke</a>,
+        whose research explores culturally-adaptive interfaces.
+        I am very excited about the potential of more thoughtful design in technology
+        to make peoples' lives more rich, meaningful, and fair.
       </p>
     </div>
 
@@ -97,14 +98,16 @@
       <img src="./images/UW.png" class="school_img"/>
       <div class="school_header">
         <h4 class="school_name">University of Washington</h4>
-        <p>2016-2020, Bachelors in Computer Science</p>
+        <p>2016-2019, Bachelors in Computer Science</p>
       </div>
       <p>Coursework</p>
       <ul class="content">
         <li>Data Structures and Parallelism</li>
         <li>Foundations of Computing I</li>
+        <li>Foundations of Computing II</li>
         <li>Software Design and Implementation</li>
         <li>The Hardware-Software Interface</li>
+        <li>Systems Programming</li>
         <li>Introduction to Data Management</li>
         <li>Programming Languages</li>
       </ul>
@@ -115,6 +118,8 @@
       <h2 class="header">skills</h2>
       <ul class="content">
         <li>Java</li>
+        <li>C</li>
+        <li>SQL</li>
         <li>HTML</li>
         <li>CSS</li>
       </ul>
@@ -129,10 +134,9 @@
         <div class="projectContent">
           <h4 class="projectHeading">UW Campus Map</h4>
           <p class="projectBody">
-            For the final project in my Software Design and Implementation class, I made a
-            "google maps" application for the UW campus which displays a map of campus and the shortest path
-            between any two buildings on the map. Over the course of the project, I wrote hundreds of unit tests.
-            <a href="./downloads/CampusPaths.jar" download>Download the jar.</a>
+            For my Software Design and Implementation class, I wrote and tested
+            a "google maps" application for the UW campus which displays a map
+            of campus and the shortest path between any two buildings on the map.
           </p>
           <div>
             <p class="skill language">JAVA</p>
@@ -147,8 +151,8 @@
         <div class="projectContent">
           <h4 class="projectHeading">Digestif</h4>
           <p class="projectBody">
-            With a graduate student in the UW HCI lab, I helped implement an
-            online tool to encourage researchers to create "digestif," or conclusion pages
+            With a graduate student in the UW HCI lab, I implemented an
+            online tool to help researchers create "digestif," or conclusion pages
             for their online experiments. This project was made to support a series
             of papers about conclusion pages, their benefits, and how to promote their use.
             <a href="http://students.washington.edu/emjun/digestif/" target="_blank">Check out the prototype.</a>

@@ -58,7 +58,7 @@ ul {
 #headerContent {
   margin: 0 auto;
   position: relative;
-  max-width: 200px;
+  max-width: 210px;
   opacity: 0;
 }
 
@@ -69,26 +69,12 @@ ul {
   border: 3px solid white;
 }
 
-#jo {
-  color: blue;
-  display: inline;
-  margin-left: 25px;
-  border: 3px solid white;
-}
-
 @supports (background-clip: text) or (-webkit-background-clip: text) {
   #blue {
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
     background-image: url("./images/intro_water.gif");
-  }
-
-  #jo {
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    background-image: linear-gradient(rgba(255,0,0,0) 100%, rgba(255,0,0,1));
   }
 }
 
@@ -132,9 +118,17 @@ ul {
   display: none;
 }
 
-#body {
-  opacity: 0;
+#site_body {
   position: fixed;
+  transition: opacity 0.5s ease;
+}
+
+.invisible {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
 }
 
 #buttons {
@@ -283,7 +277,7 @@ ul {
     margin-left: 35px;
   }
   #headerContent {
-    max-width: 390px;
+    max-width: 367px;
   }
   .header {
     font-size: 75px;
@@ -353,5 +347,14 @@ ul {
   }
   100% {
     opacity: .5;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

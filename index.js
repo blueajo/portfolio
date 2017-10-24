@@ -1,5 +1,13 @@
 // maps each section to its color
 var colorMap = ['rgba(255,255,255,0)', 'red', 'purple', 'orange', 'green'];
+// tells if body is visible
+var visible = false;
+// vars for css elements used in scroll to avoid too many calls to them
+var site_body = $('#site_body');
+var about = $('#About');
+var education = $('#Education');
+var skills = $('#Skills');
+var projects = $('#Projects');
 
 // delays the static positioning of the site upon load
 $(window).on('load', function() {
@@ -19,7 +27,7 @@ $(window).on('load', function() {
   }, 1830);
   setTimeout(function() {
     $('#nextButton').css({animationPlayState: "running"});
-    $('#body').css({position: 'static'});
+    site_body.css({position: 'static'});
   }, 1600);
 });
 
@@ -46,7 +54,7 @@ function detectIE() {
   return false;
 }
 
-if(detectIE) {
+if(detectIE()) {
   var supportsTextClip = false;
   var doesntSupportSticky = true;
 } else {
@@ -55,27 +63,20 @@ if(detectIE) {
 }
 
 // handles scroll-based animations
-(function () {
-  var handleScroll = function () {
-    var t = document.documentElement.scrollTop || document.body.scrollTop;
+setInterval(handleScroll, 50);
+function handleScroll() {
+  var t = document.documentElement.scrollTop || document.body.scrollTop;
 
-    if(doesntSupportSticky) {
-      stickyTop(t);
-    }
+  if(doesntSupportSticky) {
+    stickyTop(t);
+  }
 
-    bodyAppear(t);
+  bodyAppear(t);
 
-    if(supportsTextClip) {
-      colorChange(t);
-    }
-  };
-
-  $(document).ready(function() {
-    setTimeout(function() {
-      window.addEventListener('scroll', handleScroll, false);
-    }, 2040);
-  });
-}());
+  if(supportsTextClip) {
+    colorChange(t);
+  }
+}
 
 // handles sticky top for stupid browsers that don't support sticky (i.e. MICROSOFT)
 function stickyTop(t) {
@@ -88,18 +89,15 @@ function stickyTop(t) {
   }
 }
 
-//handles appearance of body on scrollTopvar bodyOpacity = (t / 400);
+//handles appearance of body
 function bodyAppear(t) {
-  var bodyOpacity = (t / 400);
-
-  if(bodyOpacity >= 1) {
-    bodyOpacity = 1;
+  if (t < 250 && visible) {
+    visible = false;
+    site_body.toggleClass("visible");
+  } else if(t > 250 && !visible) {
+    visible = true;
+    site_body.toggleClass("visible");
   }
-  if(bodyOpacity <= 0) {
-    bodyOpacity = 0;
-  }
-
-  document.getElementById('body').style.opacity = bodyOpacity;
 }
 
 // handles color change animation for browers that support it (i.e. NOT MICROSOFT)
@@ -107,22 +105,22 @@ function colorChange(t) {
   var color1;
   var color2;
 
-  if (t < $('#About').offset().top) {
+  if (t < about.offset().top) {
     color1 = colorMap[0];
     color2 = colorMap[1];
-    t = t / $('#About').offset().top;
-  } else if (t < $('#Education').offset().top) {
+    t = t / about.offset().top;
+  } else if (t < education.offset().top) {
     color1 = colorMap[1];
     color2 = colorMap[2];
-    t = (t - $('#About').offset().top) / ($('#Education').offset().top - $('#About').offset().top);
-  } else if (t < $('#Skills').offset().top) {
+    t = (t - about.offset().top) / (education.offset().top - about.offset().top);
+  } else if (t < skills.offset().top) {
     color1 = colorMap[2];
     color2 = colorMap[3];
-    t = (t - $('#Education').offset().top) / ($('#Skills').offset().top - $('#Education').offset().top);
+    t = (t - education.offset().top) / (skills.offset().top - education.offset().top);
   } else {
     color1 = colorMap[3];
     color2 = colorMap[4];
-    t = (t - $('#Skills').offset().top) / ($('#Projects').offset().top - $('#Skills').offset().top);
+    t = (t - skills.offset().top) / (projects.offset().top - skills.offset().top);
   }
 
   t = 100 - 200 * t;
@@ -135,8 +133,7 @@ function colorChange(t) {
     background = "linear-gradient(" + color1 + " 0%, " + color2 + " " + (100 + t) + "%)";
   }
 
-  document.getElementById("blue").style.backgroundImage = background + ', url("./images/intro_water.gif")';
-  document.getElementById("jo").style.backgroundImage = background;
+  document.getElementById('blue').style.backgroundImage = background + ', url("./images/intro_water.gif")';
 }
 
 // handles smooth scrolling when clicking on # links
@@ -158,11 +155,11 @@ function next() {
   var t = window.document.body.scrollTop;
   var target;
 
-  if (t < $('#About').offset().top - 1) {
+  if (t < about.offset().top - 1) {
     target = "#About";
-  } else if (t < $('#Education').offset().top - 1) {
+  } else if (t < education.offset().top - 1) {
     target = "#Education";
-  } else if (t < $('#Skills').offset().top - 1) {
+  } else if (t < skills.offset().top - 1) {
     target = "#Skills";
   } else {
     target = "#Projects";
