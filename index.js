@@ -133,7 +133,7 @@ function colorChange(t) {
     background = "linear-gradient(" + color1 + " 0%, " + color2 + " " + (100 + t) + "%)";
   }
 
-  document.getElementById('blue').style.backgroundImage = background + ', url("./images/intro_water.gif")';
+  document.getElementById('blue').style.backgroundImage = background + ', url("./images/intro_img.jpg")';
 }
 
 // handles smooth scrolling when clicking on # links
