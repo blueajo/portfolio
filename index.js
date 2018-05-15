@@ -1,5 +1,5 @@
 // maps each section to its color
-var colorMap = ['rgba(255,255,255,0)', 'red', 'purple', 'orange', 'green'];
+var colorMap = ['blue', 'red', 'purple', 'orange', 'green'];
 // tells if body is visible
 var visible = false;
 // vars for css elements used in scroll to avoid too many calls to them
@@ -133,7 +133,7 @@ function colorChange(t) {
     background = "linear-gradient(" + color1 + " 0%, " + color2 + " " + (100 + t) + "%)";
   }
 
-  document.getElementById('blue').style.backgroundImage = background + ', url("./images/intro_img.jpg")';
+  document.getElementById('blue').style.backgroundImage = background;
 }
 
 // handles smooth scrolling when clicking on # links

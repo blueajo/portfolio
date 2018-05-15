@@ -67,7 +67,6 @@ ul {
   display: inline;
   padding: 0;
   border: 3px solid white;
-  background-size: cover;
 }
 
 @supports (background-clip: text) or (-webkit-background-clip: text) {
@@ -75,7 +74,6 @@ ul {
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
-    background-image: url("./images/intro_img.jpg");
   }
 }
 
