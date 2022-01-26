@@ -12,6 +12,8 @@ body {
   width: 100vw;
   max-width:100%;
   overflow: auto;
+  min-height: 1px;
+  overflow: hidden;
 }
 
 .main_image {
@@ -19,7 +21,6 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
 }
 
 .info_overlay {
@@ -53,7 +54,7 @@ body {
 
 #Harvard {
   left: 65%;
-  top: 75%;
+  top: 57vw;
 }
 
 #Harvard:hover~#Harvard_info {
@@ -62,7 +63,7 @@ body {
 
 #MLebanon {
   left: 50%;
-  top: 80%;
+  top: 60vw;
 }
 
 #MLebanon:hover~#MLebanon_info {
@@ -71,7 +72,7 @@ body {
 
 #Hancock {
   left: 55%;
-  top: 80%;
+  top: 60vw;
 }
 
 #Hancock:hover~#Hancock_info {
@@ -80,7 +81,7 @@ body {
 
 #Watervliet {
   left: 51%;
-  top: 75%;
+  top: 65vw;
 }
 
 #Watervliet:hover~#Watervliet_info {
