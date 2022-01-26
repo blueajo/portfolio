@@ -1,0 +1,88 @@
+html {
+  font-size: 2vw;
+}
+
+body {
+  font-family: 'Helvetica', serif;
+  padding: 0;
+  margin: 0;
+}
+
+.frame {
+  width: 100vw;
+  max-width:100%;
+  overflow: auto;
+}
+
+.main_image {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.info_overlay {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all .5s ease-out;
+}
+
+.city {
+  background-color: #A0A0A0;
+  border: none;
+  color: white;
+  position: absolute;
+  width: 1.5vw;
+  height: 1.5vw;
+  border-radius: 50%;
+  transition: all 1s ease-out;
+}
+
+.city:hover {
+  background-color: #F53920;
+}
+
+.info_layover {
+  position:absolute;
+
+}
+
+#Harvard {
+  left: 65%;
+  top: 75%;
+}
+
+#Harvard:hover~#Harvard_info {
+  opacity: 1;
+}
+
+#MLebanon {
+  left: 50%;
+  top: 80%;
+}
+
+#MLebanon:hover~#MLebanon_info {
+  opacity: 1;
+}
+
+#Hancock {
+  left: 55%;
+  top: 80%;
+}
+
+#Hancock:hover~#Hancock_info {
+  opacity: 1;
+}
+
+#Watervliet {
+  left: 51%;
+  top: 75%;
+}
+
+#Watervliet:hover~#Watervliet_info {
+  opacity: 1;
+}
