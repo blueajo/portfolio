@@ -8,39 +8,44 @@ body {
   margin: 0;
 }
 
-.frame {
+.infoHeader {
+  margin-bottom: .25em;
+  font-weight: bold;
+}
+
+.info {
+  margin-top: 0em;
+}
+#imageFrame {
   width: 100vw;
-  max-width:100%;
-  overflow: auto;
-  min-height: 1px;
+  height: 100vw;
   overflow: hidden;
 }
 
 .main_image {
   width: 100%;
+  opacity: 1;
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.info_overlay {
-  opacity: 0;
+#infoFrame {
+  width: 40vw;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  transition: all .5s ease-out;
+  top: 28vw;
+  left: 55vw;
+  height: 67vw;
+  overflow: hidden;
 }
 
-.city {
-  background-color: #A0A0A0;
-  border: none;
-  color: white;
-  position: absolute;
-  width: 1.5vw;
-  height: 1.5vw;
-  border-radius: 50%;
-  transition: all 1s ease-out;
+.graph {
+  display: inline-block;
+}
+
+.graphBottom {
+  stroke:rgb(255,255,255);
+  stroke-width:1;
 }
 
 .city:hover {
@@ -50,40 +55,4 @@ body {
 .info_layover {
   position:absolute;
 
-}
-
-#Harvard {
-  left: 65%;
-  top: 57vw;
-}
-
-#Harvard:hover~#Harvard_info {
-  opacity: 1;
-}
-
-#MLebanon {
-  left: 50%;
-  top: 60vw;
-}
-
-#MLebanon:hover~#MLebanon_info {
-  opacity: 1;
-}
-
-#Hancock {
-  left: 55%;
-  top: 60vw;
-}
-
-#Hancock:hover~#Hancock_info {
-  opacity: 1;
-}
-
-#Watervliet {
-  left: 51%;
-  top: 65vw;
-}
-
-#Watervliet:hover~#Watervliet_info {
-  opacity: 1;
 }
