@@ -9,6 +9,26 @@ const links = [['email', 'email.png'],
                ['earthseed', 'earthseed.png'],
                ['undergraduateportfolio', 'undergraduateportfolio.jpg']];
 
+var images = new Array();
+function preload() {
+  for (i = 0; i < preload.arguments.length; i++) {
+    images[i] = new Image();
+    images[i].src = 'img/preview_imgs/' + preload.arguments[i];
+  }
+}
+preload(
+    'email.png',
+    'cv.png',
+    'sanpaolo.png',
+    'sagunto.png',
+    'forestclearingschool.png',
+    'scientistsrefuge.png',
+    'atlasurbium.png',
+    'foodethnographer.png',
+    'earthseed.png',
+    'undergraduateportfolio.jpg'
+);
+
 function findImage(id) {
   for (link of links) {
     if (id == link[0]) {
