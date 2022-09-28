@@ -4,10 +4,7 @@ const links = [['email', 'email.png'],
                ['sagunto', 'sagunto.png'],
                ['forestclearingschool', 'forestclearingschool.png'],
                ['scientistsrefuge', 'scientistsrefuge.png'],
-               ['atlasurbium', 'atlasurbium.png'],
-               ['foodethnographer', 'foodethnographer.png'],
-               ['earthseed', 'earthseed.png'],
-               ['undergraduateportfolio', 'undergraduateportfolio.jpg']];
+               ['atlasurbium', 'atlasurbium.png']];
 
 var images = new Array();
 function preload() {
@@ -23,10 +20,7 @@ preload(
     'sagunto.png',
     'forestclearingschool.png',
     'scientistsrefuge.png',
-    'atlasurbium.png',
-    'foodethnographer.png',
-    'earthseed.png',
-    'undergraduateportfolio.jpg'
+    'atlasurbium.png'
 );
 
 function findImage(id) {
