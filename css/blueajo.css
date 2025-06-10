@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'Neutron Light';
+    font-weight: 200;
+    src: url("../fonts/Neutron-Light.otf") format("opentype");
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Neutron Light', monospace;
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 1.15;
+    color: black;
+    background-color: white;
+    color: white;
+    -webkit-text-stroke: .25px black;
+    margin: 0;
+  }
+
+  .flex-container {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .row {
+    width: auto;
+  }
+
+  .flex-item {
+    display: flex;
+    justify-content: space-between;
+ }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  #text:hover, a:hover {
+    color: black;
+    -webkit-text-stroke-width: 1.75px;
+    cursor: pointer;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
